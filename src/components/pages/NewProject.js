@@ -4,12 +4,10 @@ import ProjectFrom from '../project/ProjectForm.js';
 
 
 function NewProject(){
-    // const history = useHistory()
     const navigate = useNavigate();
 
     function createPost(project){
         // initialize cost and services
-
         project.cost = 0
         project.services = []
 
@@ -23,7 +21,6 @@ function NewProject(){
         .then((resp) => resp.json())
         .then((data) => {
             console.log(data)
-            // redirect to projects page
             // navigate("/projects")
             navigate("/projects", {msg: "Projeto criado com sucesso!"})
         })
