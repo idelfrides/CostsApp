@@ -8,8 +8,7 @@ function ServiceCard({ id, name, cost, description, key, handleRemove }){
         e.preventDefault()
         handleRemove(id, cost)
     }
-    // console.log(id)
-
+    
     return (
         <div className={styles.project_card}>
             <h4>{name}</h4>
